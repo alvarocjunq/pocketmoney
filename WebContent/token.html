@@ -7,31 +7,87 @@
   <title>Pocket Money</title>
   <script src="files/jquery-3.1.1.min.js"></script>
   <link rel="stylesheet" href="files/style.css">
-
+  
+  <script src="files/semantic.min.js"></script>
+  <link rel="stylesheet" href="files/semantic.min.css">
+  
+  <script src="files/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="files/sweetalert.css">
+  
 </head>
 <script>
 $(document).ready(function(){
-	$("#entrar").click(function(){
-		window.location = "token.html";
+	$("i.arrow").click(function(){
+		swal({
+		  title: "Receber",
+		  text: "Digite abaixo o número do pocket do cliente",
+		  type: "input",
+		  showCancelButton: true,
+		  closeOnConfirm: false,
+		  animation: "slide-from-top",
+		  inputPlaceholder: "Número pocket"
+		},
+		function(inputValue){
+		  if (inputValue === false) return false;
+		  
+		  if (inputValue === "") {
+			swal.showInputError("Favor informar o número do pocket");
+			return false
+		  }
+		  
+		  swal("Recebido!", "Pocket: " + inputValue + " recebido", "success");
+		});
 	});
 });
 </script>
 <body>
-  <div class="container background">
+  <div class="container background-purple">
+	
     <div class="btns">
-
-	  	
-      <br><br>
-      <br><br><br>
-      <br><br><br>
-      
-      <input type="text" name="email" placeholder="Usuário">
-      <br>
-      <input type="password" name="password" placeholder="Senha">
-      <br>
-      <button id="entrar">Entrar</button>
-
-    </div>
+	<i class="arrow circle massive down icon"></i>
+	<div class="date-transaction">
+		<div>Hoje <span>(11.12.2016)</span></div>
+	</div>
+	<div class="line-transaction">
+		<span style="float: left;">12:32h</span>
+		<span class="box-transaction">1234</span>
+		<span style="float: right;">R$ 123,00</span>
+	</div>
+	
+	<div class="line-transaction">
+		<span style="float: left;">12:32h</span>
+		<span class="box-transaction">1234</span>
+		<span style="float: right;">R$ 123,00</span>
+	</div>
+	
+	<div class="line-transaction">
+		<span style="float: left;">12:32h</span>
+		<span class="box-transaction">1234</span>
+		<span style="float: right;">R$ 123,00</span>
+	</div>
+	
+	<div class="line-transaction">
+		<span style="float: left;">12:32h</span>
+		<span class="box-transaction">1234</span>
+		<span style="float: right;">R$ 123,00</span>
+	</div>
+	
+	<div class="date-transaction">
+		<div>Ontem <span>(10.12.2016)</span></div>
+	</div>
+	<div class="line-transaction">
+		<span style="float: left;">12:32h</span>
+		<span class="box-transaction">1234</span>
+		<span style="float: right;">R$ 123,00</span>
+	</div>
+	
+	<div class="line-transaction">
+		<span style="float: left;">12:32h</span>
+		<span class="box-transaction">1234</span>
+		<span style="float: right;">R$ 123,00</span>
+	</div>
+	
+	</div>
   </div>
 
 </body></html>

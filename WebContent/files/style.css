@@ -1,4 +1,5 @@
 body{
+font-family: monospace;
   position: absolute;
   float: left;
   width: 100%;
@@ -60,9 +61,12 @@ input::placeholder{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f31a0', endColorstr='#601d61',GradientType=0 ); /* IE6-9 */
 }
 
+.background-purple{
+	background-color: #9f31a0;
+}
+
 span{
 	color: #fff;
-	font-family: monospace;
 }
 
 .title{
@@ -70,3 +74,42 @@ span{
 }
 
 .bold{font-weight:700}
+
+.line-transaction{
+	height: 5%;
+    background-color: #7e277f;
+    font-size: 120%;
+    vertical-align: middle;
+    padding-top: 8px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 28px;
+	margin-bottom: 10px;
+}
+
+.box-transaction{
+	background-color: #fff;
+    color: #7e277f;
+    padding: 12px;
+    border-radius: 2px;
+}
+
+.date-transaction{
+	color: #fff;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.date-transaction span{
+	color: #c1afaf;
+}
+
+i.arrow{
+	color: #fff;
+    position: absolute;
+    top: 15px;
+    left: 115;
+	cursor: pointer;
+}
+
+input{color: #fff !important;}
